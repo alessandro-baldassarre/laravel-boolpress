@@ -75,6 +75,7 @@ export default {
     padding: 30px 15px 15px 15px;
     outline: medium none;
     margin-bottom: 5rem;
+    animation: post-load 600ms ease-in;
     }
 
     .item-box-blog-image {
@@ -160,6 +161,15 @@ export default {
     margin-top: 10px;
     background-color: #fff;
     }
+
+@keyframes post-load{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 
 
 </style>
