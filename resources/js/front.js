@@ -21,6 +21,7 @@ Vue.use(VueRouter);
 import Home from "./pages/Home";
 import PostList from "./pages/PostList";
 import Post from "./pages/Post";
+import NotFound from "./pages/NotFound";
 
 const router = new VueRouter({
     mode: 'history',
@@ -40,6 +41,11 @@ const router = new VueRouter({
             path: '/post/:postId',
             name: 'post',
             component: Post
+        },
+        {
+            path: '*',
+            name: 'not-found',
+            component: NotFound,
         },
     ]
 })
