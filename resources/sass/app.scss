@@ -43,53 +43,6 @@ span.tag-color{
 div.guest-home-container{
     background-color: black;
 
-    header.guest-home{
-
-        height: 80px;
-        color: white;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 200;
-        margin: 0;
-        padding-top: 20px;
-
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .position-ref {
-        position: relative;
-    }
-
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 38px;
-    }
-
-    .content {
-        text-align: center;
-    }
-
-    .title {
-        font-size: 84px;
-    }
-
-    .links>a {
-        color: white;;
-        padding: 0 25px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-
 }
 
-}
+
