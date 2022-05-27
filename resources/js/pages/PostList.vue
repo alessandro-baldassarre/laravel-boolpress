@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Post from "./Post";
+import Post from "../components/post-list/Post.vue";
 export default {
   name: "App",
   components: {
@@ -69,7 +69,6 @@ export default {
 
 <style lang="scss" scoped>
 .cta-100 {
-  margin-top: 40px;
   padding: 2rem;
     .pagination-links{
         padding-top: 2rem;
