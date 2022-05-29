@@ -1,5 +1,7 @@
 <template>
-  <div class="container cta-100">
+<div>
+    <Preloader :showLoader="showLoader"/>
+    <div class="container cta-100" v-if="!showLoader">
     <div class="container">
       <div class="row blog">
         <Post v-for="(post, index) in posts" :key="index" :post="post" />
@@ -31,19 +33,24 @@
       </div>
     </div>
   </div>
+</div>
+
 </template>
 
 <script>
 import Post from "../components/post-list/Post.vue";
+import Preloader from "../components/Preloader.vue";
 export default {
   name: "App",
   components: {
     Post,
-  },
+    Preloader
+},
   data: function () {
     return {
       posts: [],
       pagination: {},
+      showLoader:true,
     };
   },
   methods: {
@@ -63,6 +70,9 @@ export default {
   },
   created() {
     this.getPosts();
+  },
+  mounted() {
+    setTimeout(() => (this.showLoader = false), 2000);
   },
 };
 </script>
