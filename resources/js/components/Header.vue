@@ -28,8 +28,10 @@
             <input
               class="form-control mr-sm-2"
               type="search"
-              placeholder="Post Title"
+              placeholder="Search category"
               aria-label="Search"
+              v-model="categoryName"
+              onchange="callPostList(categoryName)"
             />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Search
@@ -42,12 +44,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Header",
+  data: function () {
+    return {
+      category:"",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-header{
-    z-index: 6;
-    height: 10vh;
+header {
+  z-index: 6;
+  height: 10vh;
 }
 </style>

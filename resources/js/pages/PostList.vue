@@ -72,7 +72,7 @@ export default {
     this.getPosts();
   },
   mounted() {
-    setTimeout(() => (this.showLoader = false), 2000);
+    setTimeout(() => (this.showLoader = false), 1500);
   },
 };
 </script>
