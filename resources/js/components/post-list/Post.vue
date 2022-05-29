@@ -23,8 +23,8 @@
               </div>
               <div class="item-box-blog-data" style="padding: px 15px">
                 <p>
-                  <i class="fa fa-user-o"></i> Admin,
-                  <i class="fa fa-comments-o"></i> Comments(3)
+                  <i class="fa-solid fa-user"></i> {{post.user.name}},
+                  <i class="fa-solid fa-comments"></i> Comments(3)
                 </p>
               </div>
               <div class="item-box-blog-text">
@@ -133,7 +133,10 @@ export default {
     font-size: 13px;
     }
 
-    .item-box-blog-data p i {
+    .item-box-blog-data p{
+        color: rgb(164, 255, 255);
+
+    } i {
     font-size: 12px;
     }
 
