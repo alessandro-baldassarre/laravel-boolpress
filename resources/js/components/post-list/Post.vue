@@ -17,9 +17,9 @@
             </div>
             <div class="item-box-blog-body">
               <div class="item-box-blog-heading">
-                <a href="#" tabindex="0">
-                  <h5>{{post.title}}</h5>
-                </a>
+                <router-link tabindex="0" :to="{ name: 'post', params: { postId: post.user_id }}">
+                    <h5>{{post.title}}</h5>
+                </router-link>
               </div>
               <div class="item-box-blog-data" style="padding: px 15px">
                 <p>
@@ -33,9 +33,7 @@
                 </p>
               </div>
               <div class="mt">
-                <a href="#" tabindex="0" class="btn bg-blue-ui white read"
-                  >read more</a
-                >
+                <router-link tabindex="0" class="btn bg-blue-ui white read" :to="{ name: 'post', params: { postId: post.user_id }}">read more</router-link>
               </div>
             </div>
           </div>
