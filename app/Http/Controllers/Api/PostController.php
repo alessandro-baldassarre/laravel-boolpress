@@ -47,7 +47,7 @@ class PostController extends Controller
                 'success' => true,
                 'results' => $post,
                 'author' => $post->user,
-                'categories' => $post->category,
+                'categories' => $post->categories,
             ]);
     }
 
