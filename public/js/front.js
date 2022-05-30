@@ -1972,6 +1972,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   data: function data() {
@@ -3978,6 +3981,8 @@ var render = function () {
                   ],
                   1
                 ),
+                _vm._v(" "),
+                _vm._m(1),
               ]),
               _vm._v(" "),
               this.$route.name != "posts" && this.$route.name != "post"
@@ -4048,6 +4053,21 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link",
+          attrs: { href: "http://127.0.0.1:8000/contacts", to: "/posts" },
+        },
+        [_vm._v("Contact Us")]
+      ),
+    ])
   },
 ]
 render._withStripped = true
