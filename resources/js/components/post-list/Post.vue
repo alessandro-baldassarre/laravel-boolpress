@@ -9,9 +9,9 @@
               <!--Image-->
                 <figure>
                     <img
-                    class="img-fluid"
+                    class="img-post"
                     alt=""
-                    :src="post.photo"
+                    :src="(post.photo.startsWith('https://') || post.photo.startsWith('http://')) ? post.photo : '../../storage' + '/' + post.photo"
                     />
                 </figure>
             </div>
@@ -82,7 +82,7 @@ export default {
 
     .item-box-blog-image figure img {
     width: 100%;
-    height: auto;
+    height: 200px;
     }
 
     .item-box-blog-date {
@@ -152,7 +152,7 @@ export default {
 
     figure img{
         width: 100%;
-        height: auto;
+        height: 250px;
     }
 
     .btn.bg-blue-ui.white.read {

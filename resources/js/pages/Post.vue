@@ -6,7 +6,7 @@
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-12">
             <figure>
-              <img class="post-img" alt="" :src="post.photo" />
+              <img class="post-img" alt="" :src="(post.photo.startsWith('https://') || post.photo.startsWith('http://')) ? post.photo : '../../storage' + '/' + post.photo" />
             </figure>
             <h1>{{ post.title }}</h1>
             <p>

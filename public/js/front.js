@@ -2507,7 +2507,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".item-box-blog[data-v-36f74faf] {\n  border: 1px solid #dadada;\n  text-align: center;\n  z-index: 4;\n  padding: 30px 15px 15px 15px;\n  outline: medium none;\n  margin-bottom: 5rem;\n  -webkit-animation: post-load-data-v-36f74faf 600ms ease-in;\n          animation: post-load-data-v-36f74faf 600ms ease-in;\n}\n.item-box-blog-image[data-v-36f74faf] {\n  position: relative;\n}\n.item-box-blog-image figure img[data-v-36f74faf] {\n  width: 100%;\n  height: auto;\n}\n.item-box-blog-date[data-v-36f74faf] {\n  position: absolute;\n  z-index: 5;\n  padding: 4px 20px;\n  top: -45px;\n  right: 8px;\n  background-color: #41cb52;\n}\n.item-box-blog-date span[data-v-36f74faf] {\n  color: #fff;\n  display: block;\n  text-align: center;\n  line-height: 1.2;\n}\n.item-box-blog-date span.mon[data-v-36f74faf] {\n  font-size: 18px;\n}\n.item-box-blog-date span.day[data-v-36f74faf] {\n  font-size: 16px;\n}\n.item-box-blog-body[data-v-36f74faf] {\n  padding: 10px;\n}\n.item-heading-blog a h5[data-v-36f74faf] {\n  margin: 0;\n  line-height: 1;\n  text-decoration: none;\n  transition: color 0.3s;\n}\n.item-box-blog-heading[data-v-36f74faf] {\n  height: 50px;\n}\n.item-box-blog-heading a[data-v-36f74faf] {\n  text-decoration: none;\n}\n.item-box-blog-data p[data-v-36f74faf] {\n  font-size: 13px;\n}\n.item-box-blog-data p[data-v-36f74faf] {\n  color: rgb(164, 255, 255);\n}\ni[data-v-36f74faf] {\n  font-size: 12px;\n}\n.item-box-blog-text[data-v-36f74faf] {\n  height: 100px;\n  overflow: hidden;\n  color: rgb(166, 164, 164);\n}\n.mt-10[data-v-36f74faf] {\n  float: left;\n  margin-top: -10px;\n  padding-top: 10px;\n}\nfigure img[data-v-36f74faf] {\n  width: 100%;\n  height: auto;\n}\n.btn.bg-blue-ui.white.read[data-v-36f74faf] {\n  cursor: pointer;\n  padding: 4px 20px;\n  float: left;\n  margin-top: 10px;\n  background-color: #fff;\n}\n@-webkit-keyframes post-load-data-v-36f74faf {\n0% {\n    transform: translateY(-100%);\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes post-load-data-v-36f74faf {\n0% {\n    transform: translateY(-100%);\n}\n100% {\n    transform: translateY(0);\n}\n}", ""]);
+exports.push([module.i, ".item-box-blog[data-v-36f74faf] {\n  border: 1px solid #dadada;\n  text-align: center;\n  z-index: 4;\n  padding: 30px 15px 15px 15px;\n  outline: medium none;\n  margin-bottom: 5rem;\n  -webkit-animation: post-load-data-v-36f74faf 600ms ease-in;\n          animation: post-load-data-v-36f74faf 600ms ease-in;\n}\n.item-box-blog-image[data-v-36f74faf] {\n  position: relative;\n}\n.item-box-blog-image figure img[data-v-36f74faf] {\n  width: 100%;\n  height: 200px;\n}\n.item-box-blog-date[data-v-36f74faf] {\n  position: absolute;\n  z-index: 5;\n  padding: 4px 20px;\n  top: -45px;\n  right: 8px;\n  background-color: #41cb52;\n}\n.item-box-blog-date span[data-v-36f74faf] {\n  color: #fff;\n  display: block;\n  text-align: center;\n  line-height: 1.2;\n}\n.item-box-blog-date span.mon[data-v-36f74faf] {\n  font-size: 18px;\n}\n.item-box-blog-date span.day[data-v-36f74faf] {\n  font-size: 16px;\n}\n.item-box-blog-body[data-v-36f74faf] {\n  padding: 10px;\n}\n.item-heading-blog a h5[data-v-36f74faf] {\n  margin: 0;\n  line-height: 1;\n  text-decoration: none;\n  transition: color 0.3s;\n}\n.item-box-blog-heading[data-v-36f74faf] {\n  height: 50px;\n}\n.item-box-blog-heading a[data-v-36f74faf] {\n  text-decoration: none;\n}\n.item-box-blog-data p[data-v-36f74faf] {\n  font-size: 13px;\n}\n.item-box-blog-data p[data-v-36f74faf] {\n  color: rgb(164, 255, 255);\n}\ni[data-v-36f74faf] {\n  font-size: 12px;\n}\n.item-box-blog-text[data-v-36f74faf] {\n  height: 100px;\n  overflow: hidden;\n  color: rgb(166, 164, 164);\n}\n.mt-10[data-v-36f74faf] {\n  float: left;\n  margin-top: -10px;\n  padding-top: 10px;\n}\nfigure img[data-v-36f74faf] {\n  width: 100%;\n  height: 250px;\n}\n.btn.bg-blue-ui.white.read[data-v-36f74faf] {\n  cursor: pointer;\n  padding: 4px 20px;\n  float: left;\n  margin-top: 10px;\n  background-color: #fff;\n}\n@-webkit-keyframes post-load-data-v-36f74faf {\n0% {\n    transform: translateY(-100%);\n}\n100% {\n    transform: translateY(0);\n}\n}\n@keyframes post-load-data-v-36f74faf {\n0% {\n    transform: translateY(-100%);\n}\n100% {\n    transform: translateY(0);\n}\n}", ""]);
 
 // exports
 
@@ -4150,8 +4150,15 @@ var render = function () {
         _vm._v(" "),
         _c("figure", [
           _c("img", {
-            staticClass: "img-fluid",
-            attrs: { alt: "", src: _vm.post.photo },
+            staticClass: "img-post",
+            attrs: {
+              alt: "",
+              src:
+                _vm.post.photo.startsWith("https://") ||
+                _vm.post.photo.startsWith("http://")
+                  ? _vm.post.photo
+                  : "../../storage" + "/" + _vm.post.photo,
+            },
           }),
         ]),
       ]),
@@ -4336,7 +4343,14 @@ var render = function () {
                     _c("figure", [
                       _c("img", {
                         staticClass: "post-img",
-                        attrs: { alt: "", src: _vm.post.photo },
+                        attrs: {
+                          alt: "",
+                          src:
+                            _vm.post.photo.startsWith("https://") ||
+                            _vm.post.photo.startsWith("http://")
+                              ? _vm.post.photo
+                              : "../../storage" + "/" + _vm.post.photo,
+                        },
                       }),
                     ]),
                     _vm._v(" "),
