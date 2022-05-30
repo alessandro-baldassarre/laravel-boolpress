@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>email</h1>
+    <h1>{{ $senderName }} ti ha mandato una richiesta tramite la sezione contuct us del sito boolpress</h1>
+    <h3>L'email del mittente è:  {{ $senderEmail }} </h3>
+    <p>
+        Testo: {{ $senderMessage }}
+    </p>
 </body>
 </html>

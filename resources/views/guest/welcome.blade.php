@@ -16,6 +16,11 @@
 
 <body>
     <div class="guest-home-container">
+        @if (session('message'))
+                <div class="col-12 alert alert-succes" role="alert">
+                    {{ session('message') }}
+                </div>
+        @endif
         <div id="root"></div>
     </div>
     <script src="{{ asset('js/front.js') }}"></script>
