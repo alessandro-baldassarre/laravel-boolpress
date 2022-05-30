@@ -13,9 +13,26 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with(['user','categories'])->paginate(9);
+        $category = $request->get('category');
+
+        if($category){
+            $posts = Post::join('category_posts', function($builder) {
+                $builder->on('category_posts.post_id', '=', 'posts.id');
+            })
+            ->join('categories', function($builder) {
+                $builder->on('categories.id', '=', 'category_posts.category_id');
+                // here you can add more conditions on subcategories table.
+            })
+            ->where('name', 'LIKE', $category.'%')
+            ->get();
+        }
+        else {
+            $posts = Post::with(['user','categories'])->paginate(9);
+        }
+
+
 
         return response()->json([
             'success' => true,
