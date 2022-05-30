@@ -21,12 +21,12 @@
                     <h5>{{post.title}}</h5>
                 </router-link>
               </div>
-              <div class="item-box-blog-data" style="padding: px 15px">
+              <!-- <div class="item-box-blog-data" style="padding: px 15px">
                 <p>
                   <i class="fa-solid fa-user"></i> {{post.user.name}},
                   <i class="fa-solid fa-comments"></i> Comments(3)
                 </p>
-              </div>
+              </div> -->
               <div class="item-box-blog-text">
                 <p>
                   {{post.description}}

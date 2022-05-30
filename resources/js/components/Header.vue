@@ -24,14 +24,14 @@
               <router-link class="nav-link" to="/posts">Posts</router-link>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0" v-if="(this.$route.name != 'posts') && (this.$route.name != 'post')">
             <input
               class="form-control mr-sm-2"
               type="search"
               placeholder="Search category"
               aria-label="Search"
               v-model="categoryName"
-              onchange="callPostList(categoryName)"
+              @keyup="callPostList()"
             />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Search
@@ -48,8 +48,16 @@ export default {
   name: "Header",
   data: function () {
     return {
-      category:"",
+      categoryName: "",
     };
+  },
+  methods: {
+    callPostList() {
+    if(this.categoryName.length > 3){
+
+        this.$router.push({name:'posts', query: { category: this.categoryName } });
+    }
+    },
   },
 };
 </script>

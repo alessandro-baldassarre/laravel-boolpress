@@ -1976,8 +1976,20 @@ __webpack_require__.r(__webpack_exports__);
   name: "Header",
   data: function data() {
     return {
-      category: ""
+      categoryName: ""
     };
+  },
+  methods: {
+    callPostList: function callPostList() {
+      if (this.categoryName.length > 3) {
+        this.$router.push({
+          name: 'posts',
+          query: {
+            category: this.categoryName
+          }
+        });
+      }
+    }
   }
 });
 
@@ -2329,7 +2341,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2342,38 +2353,51 @@ __webpack_require__.r(__webpack_exports__);
     return {
       posts: [],
       pagination: {},
-      showLoader: true
+      showLoader: true,
+      category: ""
     };
   },
   methods: {
     getPosts: function getPosts(page) {
       var _this = this;
 
-      var apiUrl = 'http://localhost:8000/api/posts?page=' + page;
-      axios.get(apiUrl).then(function (result) {
-        var _result$data$results = result.data.results,
-            data = _result$data$results.data,
-            current_page = _result$data$results.current_page,
-            last_page = _result$data$results.last_page;
-        _this.posts = data;
-        _this.pagination = {
-          currentPage: current_page,
-          lastPage: last_page
-        };
-      })["catch"](function (error) {
-        console.warn(error);
-      });
+      this.posts = [], this.category = this.$route.query.category;
+
+      if (this.category) {
+        var apiUrl = "http://localhost:8000/api/posts?category=".concat(this.category);
+        axios.get(apiUrl).then(function (result) {
+          var results = result.data.results;
+          _this.posts = results;
+          console.log(_this.posts);
+        })["catch"](function (error) {
+          console.warn(error);
+        });
+      } else {
+        var _apiUrl = "http://localhost:8000/api/posts?page=".concat(page);
+
+        axios.get(_apiUrl).then(function (result) {
+          var _result$data$results = result.data.results,
+              data = _result$data$results.data,
+              current_page = _result$data$results.current_page,
+              last_page = _result$data$results.last_page;
+          _this.posts = data;
+          _this.pagination = {
+            currentPage: current_page,
+            lastPage: last_page
+          };
+        })["catch"](function (error) {
+          console.warn(error);
+        });
+      }
     }
-  },
-  created: function created() {
-    this.getPosts();
   },
   mounted: function mounted() {
     var _this2 = this;
 
     setTimeout(function () {
       return _this2.showLoader = false;
-    }, 1500);
+    }, 2000);
+    this.getPosts();
   }
 });
 
@@ -3955,43 +3979,47 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
-              _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.categoryName,
-                      expression: "categoryName",
-                    },
-                  ],
-                  staticClass: "form-control mr-sm-2",
-                  attrs: {
-                    type: "search",
-                    placeholder: "Search category",
-                    "aria-label": "Search",
-                    onchange: "callPostList(categoryName)",
-                  },
-                  domProps: { value: _vm.categoryName },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.categoryName = $event.target.value
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-outline-success my-2 my-sm-0",
-                    attrs: { type: "submit" },
-                  },
-                  [_vm._v("\n            Search\n          ")]
-                ),
-              ]),
+              this.$route.name != "posts" && this.$route.name != "post"
+                ? _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.categoryName,
+                          expression: "categoryName",
+                        },
+                      ],
+                      staticClass: "form-control mr-sm-2",
+                      attrs: {
+                        type: "search",
+                        placeholder: "Search category",
+                        "aria-label": "Search",
+                      },
+                      domProps: { value: _vm.categoryName },
+                      on: {
+                        keyup: function ($event) {
+                          return _vm.callPostList()
+                        },
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.categoryName = $event.target.value
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-outline-success my-2 my-sm-0",
+                        attrs: { type: "submit" },
+                      },
+                      [_vm._v("\n            Search\n          ")]
+                    ),
+                  ])
+                : _vm._e(),
             ]
           ),
         ]
@@ -4144,22 +4172,6 @@ var render = function () {
             ),
           ],
           1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "item-box-blog-data",
-            staticStyle: { padding: "px 15px" },
-          },
-          [
-            _c("p", [
-              _c("i", { staticClass: "fa-solid fa-user" }),
-              _vm._v(" " + _vm._s(_vm.post.user.name) + ",\n              "),
-              _c("i", { staticClass: "fa-solid fa-comments" }),
-              _vm._v(" Comments(3)\n            "),
-            ]),
-          ]
         ),
         _vm._v(" "),
         _c("div", { staticClass: "item-box-blog-text" }, [
