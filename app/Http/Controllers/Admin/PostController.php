@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\User;
 use Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -60,6 +61,7 @@ class PostController extends Controller
 
         $newPost = new Post();
         $newPost->fill($data);
+        $newPost->photo = Storage::put('uploads', $data['photo']);
         $newPost->save();
         $newPost->categories()->attach($data['category']);
 

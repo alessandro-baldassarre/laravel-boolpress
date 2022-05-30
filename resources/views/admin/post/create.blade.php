@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center py-5">
             <div class="col-md-6">
-                <form action="{{ route('admin.posts.store') }}" method="POST">
+                <form action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label for="photo">Image</label>
-                        <input type="text" class="form-control" id="photo" placeholder="Insert image URL" name="photo">
+                        <input type="file" class="form-control" id="photo" placeholder="Insert image URL" name="photo">
                         @error('photo')
                             <div class="alert alert-danger mt-2">
                                 {{ $message }}
