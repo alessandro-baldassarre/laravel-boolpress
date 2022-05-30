@@ -2381,6 +2381,7 @@ __webpack_require__.r(__webpack_exports__);
               current_page = _result$data$results.current_page,
               last_page = _result$data$results.last_page;
           _this.posts = data;
+          console.log(_this.posts);
           _this.pagination = {
             currentPage: current_page,
             lastPage: last_page
@@ -4165,7 +4166,12 @@ var render = function () {
               {
                 attrs: {
                   tabindex: "0",
-                  to: { name: "post", params: { postId: _vm.post.user_id } },
+                  to: {
+                    name: "post",
+                    params: {
+                      postId: _vm.post.post_id ? _vm.post.post_id : _vm.post.id,
+                    },
+                  },
                 },
               },
               [_c("h5", [_vm._v(_vm._s(_vm.post.title))])]
@@ -4194,7 +4200,12 @@ var render = function () {
                 staticClass: "btn bg-blue-ui white read",
                 attrs: {
                   tabindex: "0",
-                  to: { name: "post", params: { postId: _vm.post.user_id } },
+                  to: {
+                    name: "post",
+                    params: {
+                      postId: _vm.post.post_id ? _vm.post.post_id : _vm.post.id,
+                    },
+                  },
                 },
               },
               [_vm._v("read more")]

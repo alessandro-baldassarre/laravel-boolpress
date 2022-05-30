@@ -76,6 +76,7 @@ export default {
           .then((result) => {
             const { data, current_page, last_page } = result.data.results;
             this.posts = data;
+            console.log(this.posts);
             this.pagination = {
               currentPage: current_page,
               lastPage: last_page,
@@ -91,7 +92,9 @@ export default {
   mounted() {
     setTimeout(() => (this.showLoader = false), 2000);
     this.getPosts();
+
   },
+
 };
 </script>
 
