@@ -23,6 +23,9 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/posts">Posts</router-link>
             </li>
+            <li class="nav-item">
+              <a href="http://127.0.0.1:8000/contacts" class="nav-link" to="/posts">Contact Us</a>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0" v-if="(this.$route.name != 'posts') && (this.$route.name != 'post')">
             <input
